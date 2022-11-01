@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.article, {
+        foreignKey:'id_article'
+      })
     }
   }
   serie.init({
@@ -27,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     punctuation: DataTypes.STRING,
     nextsevendays: DataTypes.BOOLEAN,
     theater: DataTypes.BOOLEAN,
-    cine: DataTypes.BOOLEAN
+    cine: DataTypes.BOOLEAN,
+    id_article: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'serie',
