@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.article, {
-        foreignKey:'id_article'
-      })
+      this.belongsTo(models.article)
     }
   }
   serie.init({
@@ -31,7 +29,6 @@ module.exports = (sequelize, DataTypes) => {
     nextsevendays: DataTypes.BOOLEAN,
     theater: DataTypes.BOOLEAN,
     cine: DataTypes.BOOLEAN,
-    id_article: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'serie',

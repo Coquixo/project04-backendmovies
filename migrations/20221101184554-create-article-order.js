@@ -2,24 +2,19 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('orders', {
-      id_order: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      rentingDate: {
-        type: Sequelize.DATE
-      },
-      returnDate: {
-        type: Sequelize.DATE
-      },
-      id_user:{
+    await queryInterface.createTable('article-orders', {
+      id_article:{
         type: Sequelize.INTEGER,
         references: {
-          model: 'user',
-          key: 'id_user'
+          model: 'articles',
+          key: 'id_article'
+        }
+      },
+      id_order:{
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'orders',
+          key: 'id_order'
         }
       },
       createdAt: {
@@ -33,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('orders');
+    await queryInterface.dropTable('article-orders');
   }
 };

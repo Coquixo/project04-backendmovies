@@ -30,13 +30,10 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      rol: {
-        type: Sequelize.BOOLEAN
-      },
       id_rol:{
         type: Sequelize.INTEGER,
         references: {
-          model: 'rol',
+          model: 'rols',
           key: 'id_rol'
         }
       },

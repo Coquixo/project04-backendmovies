@@ -11,11 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.user, {
-        foreignKey:'id_user'
-      })
-      //Relacion entre article y order
-      this.belongsToMany(models.article, { through: "article-order" })
+      this.belongsTo(models.user)
+      //Relacion entre order y articleOrder
+      this.belongsToMany(models.articleOrder)
     }
   }
   order.init({
@@ -27,7 +25,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     rentingDate: DataTypes.DATE,
     returnDate: DataTypes.DATE,
-    id_user:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'order',
