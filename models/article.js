@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       // , {
       //   foreignKey:'id_article'
       // })
+      //Relacion entre article y order
+      this.belongsToMany(models.order, { through: "article-order" })
+      
     }
   }
   article.init({

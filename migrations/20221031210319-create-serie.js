@@ -33,6 +33,13 @@ module.exports = {
       cine: {
         type: Sequelize.BOOLEAN
       },
+      id_article: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'article',
+          key: 'id_article'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
