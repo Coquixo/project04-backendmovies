@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.article)
-      this.hasMany(models.order)
+      this.hasMany(models.article, { foreignKey: 'id_article' })
+      this.hasMany(models.order, { foreignKey: 'id_order' })
     }
   }
   articleOrder.init({
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'articleOrder',
+    modelName: 'article-order',
   });
   return articleOrder;
 };

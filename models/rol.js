@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.user)
+      this.hasMany(models.user, { foreignKey: 'id_rol' })
     }
   }
   rol.init({
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    type: DataTypes.ENUM('user','admin')
+    type: DataTypes.ENUM('user', 'admin')
   }, {
     sequelize,
     modelName: 'rol',
