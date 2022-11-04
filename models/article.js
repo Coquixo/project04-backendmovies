@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasOne(models.movie, { foreignKey: 'id_article' })
       this.hasOne(models.serie, { foreignKey: 'id_article' })
       //Relacion entre article y articleOrder
-      this.belongsToMany(models.articleOrder)
+      this.belongsToMany(models.order,{ through: 'articleOrder' })
       
     }
   }

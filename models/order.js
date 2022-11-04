@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.user, { foreignKey: 'id_user' })
       //Relacion entre order y articleOrder
-      this.belongsToMany(models.articleOrder)
+      this.belongsToMany(models.article,{ through: 'articleOrder' })
     }
   }
   order.init({

@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 const db = require('./db/db')
 const router = require('./router')
-// require('./models/index')
-// const models1 = require('./views/moviesRoutes')
-// const models2 = require('./views/seriesRoutes')
+require('./models/index')
+const models1 = require('./views/moviesRoutes')
+const models2 = require('./views/seriesRoutes')
 
 
 const PORT = 3000

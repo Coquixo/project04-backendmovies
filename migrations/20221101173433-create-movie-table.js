@@ -24,7 +24,11 @@ module.exports = {
       punctuation: {
         type: Sequelize.STRING
       },
-      id_article:{
+      year: {
+        type: Sequelize.STRING
+      },
+
+      id_article: {
         type: Sequelize.INTEGER,
         references: {
           model: 'articles',
