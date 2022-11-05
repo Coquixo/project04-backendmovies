@@ -12,6 +12,7 @@ module.exports = {
           synopsis: "Batman Returns. With the help of Lieutenant Jim Gordon  Batman sets out to destroy organized crime in Gotham City.",
           punctuation: "4",
           year:"2008",
+          id_article:1,
           createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
           updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
       },{
@@ -39,6 +40,7 @@ module.exports = {
     synopsis: "Saruman's forces have been destroyed. For the first time in a long time, there seems to be a little hope...",
     punctuation: "4",
     year:"2003",
+    id_article:2,
     createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
     updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
 },{
@@ -75,6 +77,7 @@ module.exports = {
   synopsis: "Oskar Schindler organizes an ambitious plan to win the sympathy of the Nazis. After the invasion of Poland...",
   punctuation: "5",
   year:"1973",
+  id_article:2,
   createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
   updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
 },{
@@ -93,6 +96,7 @@ module.exports = {
   synopsis: "The African savannah is the setting for the adventures of Simba, a little lion who is the heir to the throne.",
   punctuation: "4",
   year:"1994",
+  id_article:3,
   createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
   updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
 },{
@@ -111,6 +115,7 @@ module.exports = {
   synopsis: "Regan is a twelve-year-old girl who is the victim of paranormal phenomena such as levitation or the manifestation of superhuman strength.",
   punctuation: "5",
   year:"1997",
+  id_article:3,
   createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
   updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
 },{
@@ -192,6 +197,7 @@ module.exports = {
   synopsis: "Documentary that follows in the footsteps of the famous DJ from his beginnings to his worldwide successes, and his subsequent fight against the disease.",
   punctuation: "5",
   year:"2020",
+  id_article:1,
   createdAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` ,
   updatedAt:`${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}` , 
 },{

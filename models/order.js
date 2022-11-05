@@ -24,7 +24,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     rentingDate: DataTypes.DATE,
-    returnDate: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'order',
