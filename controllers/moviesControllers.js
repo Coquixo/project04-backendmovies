@@ -14,7 +14,7 @@ movieController.getMovies = async (req, res) => {
 movieController.getTopMovies = async (req, res) => {
     try {
         let resp = await models.movie.findAll({
-            where: { punctuation: '5' }
+            where: { rating: '5' }
         })
         res.send(resp)
     } catch (err) {
@@ -27,7 +27,7 @@ movieController.getMovieById = async (req, res) => {
     try {
         let id = req.params.id
         let resp = await models.movie.findAll({
-            where: { id: id }
+            where: { id_movie: id }
         })
         res.send(resp)
     } catch (err) {
@@ -57,6 +57,7 @@ movieController.getMoviesByGenre = async (req, res) => {
                 genre: genre
             }
         })
+        res.send(resp)
     } catch (err) {
         res.send(err)
     }
@@ -71,7 +72,7 @@ movieController.postNewMovie = async (req, res) => {
             genre: data.genre,
             image: data.image,
             synopsis: data.synopsis,
-            punctuation: data.punctuation
+            rating: data.rating
         })
 
         res.send(resp)

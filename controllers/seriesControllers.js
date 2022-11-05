@@ -14,7 +14,7 @@ serieController.getSeries = async (req, res) => {
 serieController.getTopSeries = async (req, res) => {
     try {
         let resp = await models.serie.findAll({
-            where: { punctuation: '5' }
+            where: { rating: '5' }
         })
         res.send(resp)
     } catch (err) {
@@ -27,7 +27,7 @@ serieController.getSerieById = async (req, res) => {
     try {
         let id = req.params.id
         let resp = await models.serie.findAll({
-            where: { id: id }
+            where: { id_serie: id }
         })
         res.send(resp)
     } catch (err) {
@@ -56,7 +56,9 @@ serieController.getSeriesByGenre = async (req, res) => {
             where: {
                 genre: genre
             }
+
         })
+        res.send(resp)
     } catch (err) {
         res.send(err)
     }
@@ -108,7 +110,7 @@ serieController.postNewSerie = async (req, res) => {
             genre: data.genre,
             image: data.image,
             synopsis: data.synopsis,
-            punctuation: data.punctuation,
+            rating: data.rating,
             nextsevendays: data.nextsevendays,
             theater: data.theater,
             cine: data.cine

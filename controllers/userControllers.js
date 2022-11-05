@@ -27,12 +27,12 @@ userController.postNewUser = async (req, res) => {
     }
 }
 
-//USUARIO SEGUN SU ID
+//USUARIO SEGUN SU EMAIL
 userController.getUserById = async (req, res) => {
     try {
-        let id = req.params.id
+        let mail = req.params.mail
         let resp = await models.user.findAll({
-            where: { id: id }
+            where: { mail: mail }
         })
         res.send(resp)
     } catch (err) {
@@ -69,7 +69,23 @@ userController.updateUser = async (req, res) => {
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
 
+userController.deleteUser = async (req, res) => {
+    try{
+        let mail = req.params.mail
+        let resp = await models.user.destroy({
+            where: { mail: mail }
+        })
 
+        if(resp == 1) {
+            res.send("Se ha eliminado la pelicula correctamente")
+        } else {
+            res.send("No se ha podido eliminar la pelicula")
+        }
+
+    } catch(err) {
+
+    }
+}
 
 
 module.exports = userController

@@ -6,6 +6,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('users', [
       {
+        id_user:1,
         name: "Javi",
         surname: "Moya",
         age: "28",
@@ -18,6 +19,7 @@ module.exports = {
         updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
       },
       {
+        id_user:2,
         name: "Julio",
         surname: "López",
         age: "22",
@@ -30,6 +32,7 @@ module.exports = {
         updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
       },
       {
+        id_user:3,
         name: "Roberto",
         surname: "Leal",
         age: "25",
@@ -42,6 +45,7 @@ module.exports = {
         updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
       },
       {
+        id_user:4,
         name: "Estefanía",
         surname: "Miró",
         age: "24",

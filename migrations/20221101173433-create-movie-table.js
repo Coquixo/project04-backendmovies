@@ -21,7 +21,7 @@ module.exports = {
       synopsis: {
         type: Sequelize.STRING
       },
-      punctuation: {
+      rating: {
         type: Sequelize.STRING
       },
       year: {
