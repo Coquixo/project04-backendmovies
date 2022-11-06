@@ -12,20 +12,19 @@ module.exports = {
       rentingDate: {
         type: Sequelize.DATE
       },
-      id_user: {
+      UserIdUser: {
         type: Sequelize.INTEGER,
         references: {
           model: 'users',
           key: 'id_user'
         }
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      ArticleIdArticle: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'articles',
+          key: 'id_article'
+        }
       }
     });
   },

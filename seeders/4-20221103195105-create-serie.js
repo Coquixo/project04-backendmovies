@@ -13,9 +13,8 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        id_article: 28,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 28,
+
 
       }, {
         title: "The Jeffrey Dahmer Story",
@@ -26,9 +25,8 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        id_article: 29,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 29,
+
 
       }, {
         title: "The Lord of the Rings: The Rings of Power",
@@ -39,9 +37,8 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        id_article: 30,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 30,
+
 
       }, {
         title: "The Walking Dead ",
@@ -52,9 +49,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 31,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 31,
+
 
       }, {
         title: "Grey's Anatomy",
@@ -65,9 +61,8 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        id_article: 32,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 32,
+
 
       }, {
         title: "Los Simpson",
@@ -78,9 +73,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 33,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 33,
+
 
       }, {
         title: "The Flash",
@@ -91,9 +85,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 34,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 34,
+
 
       }, {
         title: "The Good Doctor ",
@@ -104,9 +97,8 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        id_article: 35,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 35,
+
 
       }, {
         title: "Chucky",
@@ -117,9 +109,8 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        id_article: 36,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 36,
+
 
       }, {
         title: "Family Guy",
@@ -130,9 +121,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: false,
-        id_article: 37,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 37,
+
 
       }, {
         title: "Peaky Blinders ",
@@ -143,9 +133,8 @@ module.exports = {
         nextsevendays: true,
         theater: true,
         cine: true,
-        id_article: 38,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 38,
+
 
       }, {
         title: "Breaking Bad",
@@ -156,9 +145,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 39,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 39,
+
 
       }, {
         title: "Love is in the Air ",
@@ -169,9 +157,8 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: false,
-        id_article: 40,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 40,
+
 
       }, {
         title: "Vikings",
@@ -182,9 +169,8 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: false,
-        id_article: 41,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 41,
+
 
       }, {
         title: "Dragon Ball Z",
@@ -195,9 +181,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 42,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 42,
+
 
       }, {
         title: "American Horror Story",
@@ -208,9 +193,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: false,
-        id_article: 43,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 43,
+
 
       }, {
         title: "S.W.A.T.",
@@ -221,9 +205,8 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        id_article: 44,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 44,
+
 
       }, {
         title: "Cobra Kai",
@@ -234,19 +217,18 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        id_article: 45,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+        ArticleIdArticle: 45,
+
 
       }
-        
+
     ], {});
 
   },
 
   async down(queryInterface, Sequelize) {
-   
-     await queryInterface.bulkDelete('series', null, {});
-     
+
+    await queryInterface.bulkDelete('series', null, {});
+
   }
 };

@@ -30,21 +30,14 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      id_rol:{
-        type: Sequelize.INTEGER,
+      RoleIdRole:{
+        type: Sequelize.STRING,
         references: {
           model: 'rols',
           key: 'id_rol'
         }
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
+      
     });
   },
   async down(queryInterface, Sequelize) {

@@ -12,9 +12,8 @@ module.exports = {
         synopsis: "Batman Returns. With the help of Lieutenant Jim Gordon  Batman sets out to destroy organized crime in Gotham City.",
         rating: "4",
         year: "2008",
-        id_article: 1,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 1,
+        
       }, {
         title: "The Godfather",
         genre: "Action",
@@ -22,9 +21,8 @@ module.exports = {
         synopsis: "'The Godfather' is the patriarch of one of the ruling families in New York in the 1940s. A fight of violent episodes will begin...",
         rating: "5",
         year: "1972",
-        id_article: 2,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 2,
+        
       }, {
         title: "The green Mile",
         genre: "Drama",
@@ -32,9 +30,8 @@ module.exports = {
         synopsis: "In the southern United States, Paul Edgecomb is a prison guard in charge of the Green Mile, a corridor that separates the cells condemned to the electric chair",
         rating: "5",
         year: "1999",
-        id_article: 3,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 3,
+        
       }, {
         title: "The Lord of the Rings: The Return of the King",
         genre: "Action",
@@ -42,9 +39,8 @@ module.exports = {
         synopsis: "Saruman's forces have been destroyed. For the first time in a long time, there seems to be a little hope...",
         rating: "4",
         year: "2003",
-        id_article: 4,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 4,
+        
       }, {
         title: "Interstellar",
         genre: "Science fiction",
@@ -52,9 +48,8 @@ module.exports = {
         synopsis: "A group of explorers making use of a recently discovered wormhole to overcome the limitations of manned space travel.",
         rating: "3",
         year: "2010",
-        id_article: 5,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 5,
+        
       }, {
         title: "Inception",
         genre: "Science fiction",
@@ -62,9 +57,8 @@ module.exports = {
         synopsis: "Dom Cobb is a skilled thief of valuable secrets from the depths of the subconscious during the dream state when the mind is most vulnerable...",
         rating: "3",
         year: "1999",
-        id_article: 6,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 6,
+        
       }, {
         title: "Matrix",
         genre: "Science fiction",
@@ -72,9 +66,8 @@ module.exports = {
         synopsis: "Thomas Anderson leads a double life: by day he's a programmer at a major software company, and by night a computer hacker named Neo.",
         rating: "5",
         year: "1994",
-        id_article: 7,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 7,
+        
       }, {
         title: "Schindler's List",
         genre: "Drama",
@@ -82,9 +75,8 @@ module.exports = {
         synopsis: "Oskar Schindler organizes an ambitious plan to win the sympathy of the Nazis. After the invasion of Poland...",
         rating: "5",
         year: "1973",
-        id_article: 8,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 8,
+        
       }, {
         title: "Spider-Man: A new universe",
         genre: "Animation",
@@ -92,9 +84,8 @@ module.exports = {
         synopsis: "In a parallel universe where Peter Parker has died, a high school boy named Miles Morales is the new Spider-Man.",
         rating: "2",
         year: "2003",
-        id_article: 9,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 9,
+        
       }, {
         title: "The lion king",
         genre: "Animation",
@@ -102,9 +93,8 @@ module.exports = {
         synopsis: "The African savannah is the setting for the adventures of Simba, a little lion who is the heir to the throne.",
         rating: "4",
         year: "1994",
-        id_article: 10,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 10,
+        
       }, {
         title: "The infinite purge",
         genre: "Terror",
@@ -112,9 +102,8 @@ module.exports = {
         synopsis: "For the members of an underground movement, an annual night of anarchy and murder is no longer enough, so they decide to return America to endless chaos and carnage...",
         rating: "1",
         year: "2010",
-        id_article: 11,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 11,
+        
       }, {
         title: "The exorcist",
         genre: "Terror",
@@ -122,9 +111,8 @@ module.exports = {
         synopsis: "Regan is a twelve-year-old girl who is the victim of paranormal phenomena such as levitation or the manifestation of superhuman strength.",
         rating: "5",
         year: "1997",
-        id_article: 12,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 12,
+        
       }, {
         title: "The Avengers: Endgame",
         genre: "Action",
@@ -132,9 +120,8 @@ module.exports = {
         synopsis: "After the devastating events of 'Avengers: Infinity War', the universe is in ruins due to the actions of Thanos...",
         rating: "4",
         year: "2020",
-        id_article: 13,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 13,
+        
       }, {
         title: "Untouchable",
         genre: "Drama",
@@ -142,9 +129,8 @@ module.exports = {
         synopsis: "Philippe, an aristocrat who has become quadriplegic, hires Driss, an immigrant from a slum recently released from prison, as a home carer",
         rating: "5",
         year: "2003",
-        id_article: 14,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 14,
+        
       }, {
         title: "The truman show",
         genre: "Comedy",
@@ -152,9 +138,8 @@ module.exports = {
         synopsis: "Truman Burbank is an ordinary man who has lived his entire life in one of those towns where nothing ever happens. However, suddenly...",
         rating: "3",
         year: "1998",
-        id_article: 15,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 15,
+        
       }, {
         title: "Forrest gump",
         genre: "Comedy",
@@ -162,9 +147,8 @@ module.exports = {
         synopsis: "Forrest Gump is a boy with shallow mental deficiencies who, despite everything, will become a hero during the Vietnam War.",
         rating: "5",
         year: "1994",
-        id_article: 16,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 16,
+        
       }, {
         title: "Three men and one leg",
         genre: "Comedy",
@@ -172,9 +156,8 @@ module.exports = {
         synopsis: "Aldo, Giovanni and Giacomo go to the wedding of the latter whose fiancée is the sister of the two wives of the former...",
         rating: "1",
         year: "1997",
-        id_article: 17,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 17,
+        
       }, {
         title: "The unforeseen of love",
         genre: "Comedy",
@@ -182,9 +165,8 @@ module.exports = {
         synopsis: "Rosie and Alex are the best friends in the world and they live in Dublin. A story of laughter and love will arise between them...",
         rating: "1",
         year: "2010",
-        id_article: 18,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 18,
+        
       }, {
         title: "Alien, the eighth passenger",
         genre: "Terror",
@@ -192,9 +174,8 @@ module.exports = {
         synopsis: "Back on Earth, the cargo ship Nostromo cuts its journey short and awakens its seven crew members...",
         rating: "4",
         year: "1979",
-        id_article: 19,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 19,
+        
       }, {
         title: "Night and fog",
         genre: "Documental",
@@ -202,9 +183,8 @@ module.exports = {
         synopsis: "A walk through the Nazi concentration camps of Nuremberg...",
         rating: "3",
         year: "2011",
-        id_article: 20,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 20,
+        
       }, {
         title: "Avicii: True Stories ",
         genre: "Documental",
@@ -212,9 +192,8 @@ module.exports = {
         synopsis: "Documentary that follows in the footsteps of the famous DJ from his beginnings to his worldwide successes, and his subsequent fight against the disease.",
         rating: "5",
         year: "2020",
-        id_article: 21,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 21,
+        
       }, {
         title: "Free alone",
         genre: "Documental",
@@ -222,9 +201,8 @@ module.exports = {
         synopsis: "Documentary that narrates the feat of Alex Honnold when climbing without any help the vertical rock formation located within the Yosemite.",
         rating: "1",
         year: "2018",
-        id_article: 22,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 22,
+        
       }, {
         title: "Soul",
         genre: "Animation",
@@ -232,9 +210,8 @@ module.exports = {
         synopsis: "Have you ever wondered where your passion, dreams, and interests come from? What is it that makes you... you?",
         rating: "3",
         year: "2019",
-        id_article: 23,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 23,
+        
       }, {
         title: "The glow",
         genre: "Terror",
@@ -242,9 +219,8 @@ module.exports = {
         synopsis: "Jack Torrance moves with his wife and son to the impressive Overlook hotel in Colorado to take care of its maintenance during the winter season.",
         rating: "4",
         year: "1980",
-        id_article: 24,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 24,
+        
       }, {
         title: "Life imprisonment",
         genre: "Drama",
@@ -252,9 +228,8 @@ module.exports = {
         synopsis: "Accused of the murder of his wife, Andrew Dufresne, after being sentenced to life in prison, is sent to Shawshank prison...",
         rating: "2",
         year: "2015",
-        id_article: 25,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 25,
+        
       }, {
         title: "Klaus",
         genre: "Animation",
@@ -262,9 +237,8 @@ module.exports = {
         synopsis: "Santa Klaus has arrived for Christmas!",
         rating: "1",
         year: "2020",
-        id_article: 26,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 26,
+        
       }, {
         title: "Tomorrow's war",
         genre: "Science fiction",
@@ -272,9 +246,8 @@ module.exports = {
         synopsis: "One day the world comes to a standstill when a group of time travelers is transported from the year 2051 to deliver an urgent message: Humanity is losing the global war against a deadly alien species.",
         rating: "1",
         year: "2021",
-        id_article: 27,
-        createdAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
-        updatedAt: `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDay()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+        ArticleIdArticle: 27,
+        
       }
     ], {});
 

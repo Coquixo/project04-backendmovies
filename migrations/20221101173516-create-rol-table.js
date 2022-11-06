@@ -5,21 +5,11 @@ module.exports = {
     await queryInterface.createTable('rols', {
       id_rol: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      type: {
-        type: Sequelize.ENUM('user','admin')
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       }
+     
+      
     });
   },
   async down(queryInterface, Sequelize) {
