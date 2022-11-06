@@ -1,11 +1,11 @@
 const models = require('../models/index')
-
+const {Op} = require('sequelize');
 const movieController = {}
 
 
 //LISTADO DE TODAS LAS PELICULAS
 movieController.getMovies = async (req, res) => {
-    let resp = await models.movie.findAll()
+    let resp = await models.movies.findAll()
 
     res.send(resp)
 }
@@ -13,7 +13,7 @@ movieController.getMovies = async (req, res) => {
 //LISTADO PELICULAS MAS VALORADAS
 movieController.getTopMovies = async (req, res) => {
     try {
-        let resp = await models.movie.findAll({
+        let resp = await models.movies.findAll({
             where: { rating: '5' }
         })
         res.send(resp)
@@ -26,7 +26,7 @@ movieController.getTopMovies = async (req, res) => {
 movieController.getMovieById = async (req, res) => {
     try {
         let id = req.params.id
-        let resp = await models.movie.findAll({
+        let resp = await models.movies.findAll({
             where: { id_movie: id }
         })
         res.send(resp)
@@ -39,7 +39,7 @@ movieController.getMovieById = async (req, res) => {
 movieController.getMovieByTitle = async (req, res) => {
     try {
         let title = req.params.title
-        let resp = await models.movie.findAll({
+        let resp = await models.movies.findAll({
             where: { title: title }
         })
         res.send(resp)
@@ -52,7 +52,8 @@ movieController.getMovieByTitle = async (req, res) => {
 movieController.getMoviesByGenre = async (req, res) => {
     try {
         let genre = req.params.genre
-        let resp = await models.movie.findAll({
+        let resp = await models.movies.findAll({
+            attributes: ['title', 'genre'],
             where: {
                 genre: genre
             }
@@ -64,41 +65,46 @@ movieController.getMoviesByGenre = async (req, res) => {
 }
 
 // REGISTRAR NUEVA PELICULA
-movieController.postNewMovie = async (req, res) => {
-    try {
-        let data = req.body
-        let resp = await models.movie.create({
-            title: data.title,
-            genre: data.genre,
-            image: data.image,
-            synopsis: data.synopsis,
-            rating: data.rating
-        })
+// movieController.postNewMovie = async (req, res) => {
+//     try {
+//         let data = req.body
+//         let resp = await models.movies.create({
+//             title: data.title,
+//             genre: data.genre,
+//             image: data.image,
+//             synopsis: data.synopsis,
+//             rating: data.rating,
+//             year: data.year
+//         })
 
-        res.send(resp)
+//         if(resp == 1) {
+//             res.send("Se ha registrado la pelicula correctamente")
+//         } else {
+//             res.send("No se ha podido registar la pelicula")
+//         }
 
-    } catch (err) {
-        res.send(err)
-    }
-}
+//     } catch (err) {
+//         res.send(err)
+//     }
+// }
 
 // ELIMINAR UNA PELICULA
-movieController.deleteMovie = async (req, res) => {
-    try{
-        let title = req.params.title
-        let resp = await models.movie.destroy({
-            where: { title: title }
-        })
+// movieController.deleteMovie = async (req, res) => {
+//     try{
+//         let title = req.params.title
+//         let resp = await models.movies.destroy({
+//             where: { title: title }
+//         })
 
-        if(resp == 1) {
-            res.send("Se ha eliminado la pelicula correctamente")
-        } else {
-            res.send("No se ha podido eliminar la pelicula")
-        }
+//         if(resp == 1) {
+//             res.send("Se ha eliminado la pelicula correctamente")
+//         } else {
+//             res.send("No se ha podido eliminar la pelicula")
+//         }
 
-    } catch(err) {
+//     } catch(err) {
 
-    }
-}
+//     }
+// }
 
 module.exports = movieController

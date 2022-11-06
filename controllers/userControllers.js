@@ -6,32 +6,13 @@ const userController = {}
 
 
 
-// REGISTRAR NUEVO USUARIO
-userController.postNewUser = async (req, res) => {
-    try {
-        let data = req.body
-        let resp = await models.user.create({
-            name: data.name,
-            surname: data.surname,
-            age: data.age,
-            phone: data.phone,
-            address: data.address,
-            mail: data.mail,
-            password: data.password
-        })
 
-        res.send(resp)
-
-    } catch (err) {
-        res.send(err)
-    }
-}
 
 //USUARIO SEGUN SU EMAIL
-userController.getUserById = async (req, res) => {
+userController.getUserByMail = async (req, res) => {
     try {
-        let mail = req.params.mail
-        let resp = await models.user.findAll({
+        let { mail } = req.params;
+        let resp = await models.users.findAll({
             where: { mail: mail }
         })
         res.send(resp)
@@ -42,47 +23,54 @@ userController.getUserById = async (req, res) => {
 
 // MODIFICAR DATOS DE USUARIO
 userController.updateUser = async (req, res) => {
-    try {
-        let data = req.body
-        let resp = await models.user.update(
-            {
-                name: data.name,
-                surname: data.surname,
-                age: data.age,
-                phone: data.phone,
-                address: data.address,
-                mail: data.mail,
-                password: data.password,
-            },
-            {
-                where: { id_user: data.id_user }
-            }
-        )
 
-        res.send(resp)
+    let { mail } = req.params;
+    let user = req.body
+    let searchUser = await models.users.findOne(
 
-    } catch (err) {
-        res.send(err)
+        {
+            where: { mail: req.auth.mail }
+        }
+    )
+    let newPassword = searchUser.password
+    if (user.password) {
+        newPassword = encryptPasswordService(user.password)
     }
-}
+
+    let resp = await models.users.update(
+        {
+            name: user.name,
+            mail: user.mail,
+            password: newPassword
+        },
+        {
+            where: { mail: mail }
+        }
+    )
+    res.json({
+        resp, message: "El usuario se ha modificado correctamente"
+    })
+};
+
+
+
+
+
+
 
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
 
 userController.deleteUser = async (req, res) => {
-    try{
-        let mail = req.params.mail
-        let resp = await models.user.destroy({
+    try {
+        let { mail } = req.params
+        let resp = await models.users.destroy({
             where: { mail: mail }
         })
+        res.json({ resp, message: "Se ha elminado el usuario correctamente" })
+        
 
-        if(resp == 1) {
-            res.send("Se ha eliminado la pelicula correctamente")
-        } else {
-            res.send("No se ha podido eliminar la pelicula")
-        }
-
-    } catch(err) {
+    } catch (err) {
 
     }
 }

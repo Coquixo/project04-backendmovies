@@ -1,17 +1,13 @@
 const express = require('express')
-const app = express()
 const db = require('./db/db')
+const { sequelize } = require('./models/index')
+const app = express()
 const router = require('./router')
-require('./models/index')
-const models1 = require('./views/moviesRoutes')
-const models2 = require('./views/seriesRoutes')
-
 
 const PORT = 3000
 
 //middleware
 app.use(express.json())
-// app.use(returnHi)
 app.use(router)
 
 
