@@ -53,6 +53,10 @@ const createUser = async (userBody) => {
     userBody.password = hash;
   const user = await models.users.create({
     name: userBody.name,
+    surname: userBody.surname,
+    age:userBody.age,
+    phone:userBody.phone,
+    address: userBody.address,
     mail: userBody.mail,
     password: userBody.password,
     RolIdRol: userBody.RolIdRol

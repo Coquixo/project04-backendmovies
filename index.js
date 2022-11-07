@@ -6,7 +6,7 @@ const router = require('./router')
 
 const PORT = 3000
 
-//middleware
+//middlewares
 app.use(express.json())
 app.use(router)
 

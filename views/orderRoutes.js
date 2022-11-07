@@ -16,13 +16,13 @@ router.post('/newOrderMovie',  isValidUser(), orderController.postNewOrderMovie)
 router.post('/newOrderSerie',  isValidUser(), orderController.postNewOrderSerie);
 
 //MODIFICAR DATOS DE UN PEDIDO
-router.patch('/updateOrder/', isValidUser(), orderController.updateOrder);
+router.patch('/updateOrder', isValidUser(), orderController.updateOrder);
 
 //LISTAR TODOS LOS PEDIDOS DE UN USUARIO
 router.get('/orders/:id', orderController.getOrdersByUser)
 
 //LISTAR TODOS LOS PEDIDOS HECHOS EN LA APLICACION(sólo puede realizarlo el admin)
-router.get('/appOrders/', isValidRole("admin"), orderController.getAppOrders)
+router.get('/appOrders', isValidRole("admin"), orderController.getAppOrders)
 
 
 

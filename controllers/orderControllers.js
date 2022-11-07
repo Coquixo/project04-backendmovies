@@ -14,23 +14,23 @@ orderController.postNewOrderMovie = async (req, res) => {
 
         if (body.mail === req.auth?.mail) {
             let movie = await models.movies.findOne({
-                where: { title: body.name }
+                where: { title: body.title }
             })
             let repeated = await models.orders.findOne({
                 where: {
                     UserIdUser: req.auth.id,
-                    ArticleIdArticle: movie.ArticleIdArticle,
+                    articleIdArticle: movie.articleIdArticle,
                 }
             })
             if (!repeated) {
                 let resp = await models.orders.create({
                     rentingDate: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`,
                     UserIdUser: req.auth.id,
-                    ArticleIdArticle: movie.ArticleIdArticle
+                    articleIdArticle: movie.articleIdArticle
                 })
                 res.status(200).json({
                     resp,
-                    email: req.auth?.email,
+                    mail: req.auth?.mail,
                     message: "Tu pedido de peliculas se ha realizado correctamente"
                 })
             } else {
@@ -52,19 +52,19 @@ orderController.postNewOrderSerie = async (req, res) => {
 
         if (body.mail === req.auth?.mail) {
             let serie = await models.series.findOne({
-                where: { title: body.name }
+                where: { title: body.title }
             })
             let repeated = await models.orders.findOne({
                 where: {
                     UserIdUser: req.auth.id,
-                    ArticleIdArticle: serie.ArticleIdArticle,
+                    articleIdArticle: serie.articleIdArticle,
                 }
             })
             if (!repeated) {
                 let resp = await models.orders.create({
                     rentingDate: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`,
                     UserIdUser: req.auth.id,
-                    ArticleIdArticle: serie.ArticleIdArticle
+                    articleIdArticle: serie.articleIdArticle
                 })
                 res.status(200).json({
                     resp,
@@ -86,27 +86,27 @@ orderController.updateOrder = async (req, res) => {
     try {
         let body = req.body;
         let movie = await models.movies.findOne({
-            where: { title: body.name }
+            where: { title: body.title }
         })
         let orderedMovie = await models.orders.findOne({
             where: {
-                ArticleIdArticle: movie.ArticleIdArticle,
+                articleIdArticle: movie.articleIdArticle,
             }
         })
-        if (body.email === req.auth?.email && movie.ArticleIdArticle === orderedMovie.ArticleIdArticle) {
+        if (body.mail === req.auth?.mail && movie.articleIdArticle === orderedMovie.articleIdArticle) {
             let resp = await models.orders.update({
                 rentingDate: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`
             },
                 {
                     where: {
-                        ArticleIdArticle: orderedMovie.ArticleIdArticle
+                        articleIdArticle: orderedMovie.articleIdArticle
                     }
                 })
         } res.status(200).json({
-            message: `New Date for the movie ${movie.title}`
+            message: `Nueva fecha para la pelicula ${movie.title}`
         })
     } catch (error) {
-        res.json({ message: "That movie is not on the order" })
+        res.json({ message: "esta pelicula no esta en el pedido" })
         console.error(error)
     }
 }
@@ -120,7 +120,7 @@ orderController.getOrdersByUser = async (req, res) => {
     })
     res.status(200).json({
       resp,
-      message: "The orders from the user: "
+      message: "Aquí estan tus pedidos "
     })
   }    
 // orderController.getOrdersByUser = async (req, res) => {
@@ -151,7 +151,7 @@ orderController.getOrdersByUser = async (req, res) => {
 orderController.getAppOrders = async (req, res) => {
     let resp = await models.orders.findAll({
     })
-    res.status(200).json({message:"All the orders: ", resp})}
+    res.status(200).json({message:"Estos son todos los pedidos. ", resp})}
   
 
 

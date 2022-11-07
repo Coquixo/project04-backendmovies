@@ -46,6 +46,10 @@ userController.updateUser = async (req, res) => {
     let resp = await models.users.update(
         {
             name: user.name,
+            surname: user.surname,
+            age: user.age,
+            phone: user.phone,
+            address: user.address,
             mail: user.mail,
             password: newPassword
         },
