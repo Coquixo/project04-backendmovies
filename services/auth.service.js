@@ -49,13 +49,14 @@ const encryptPassword = (password) => {
 }
 
 const createUser = async (userBody) => {
-  const hash = encryptPasswordService(userBody.password);
+  const hash = encryptPassword(userBody.password);
     userBody.password = hash;
   const user = await models.users.create({
     name: userBody.name,
     mail: userBody.mail,
     password: userBody.password,
-    RoleIdRole: userBody.rol
+    RolIdRol: userBody.RolIdRol
+    
   });
   return user;
 }

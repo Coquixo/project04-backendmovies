@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     mail: DataTypes.STRING,
     password: DataTypes.STRING,
-    RoleIdRole: {
+    RolIdRol: {
       type: DataTypes.STRING,
       allowNull: false,
       references: {

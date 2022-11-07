@@ -3,6 +3,12 @@ const models = require('../models/index')
 const userController = {}
 
 
+const {
+    encryptPassword
+} = require('../services/auth.service');
+require('dotenv').config();
+
+
 
 
 
@@ -34,7 +40,7 @@ userController.updateUser = async (req, res) => {
     )
     let newPassword = searchUser.password
     if (user.password) {
-        newPassword = encryptPasswordService(user.password)
+        newPassword = encryptPassword(user.password)
     }
 
     let resp = await models.users.update(

@@ -30,7 +30,7 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      RoleIdRole:{
+      RolIdRol:{
         type: Sequelize.STRING,
         references: {
           model: 'rols',

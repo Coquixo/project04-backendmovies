@@ -73,7 +73,7 @@ const authLoginController = async (req, res) => {
         const jwt = jsonwebtoken.sign({
             mail: userFound.mail,
             id: userFound.id_user,
-            role: userFound.RoleIdRole.toLowerCase()
+            rol: userFound.RolIdRol.toLowerCase()
         }, secret);
         res.status(200).json({
             message: "Login successful", jwt: jwt
