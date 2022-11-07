@@ -1,5 +1,5 @@
-const models = require('../models/index');
-const crypto = require('node:crypto');
+const models = require('../models/index')
+const crypto = require('node:crypto')
 
 const assertValidPassword = (pass) => {
   if (pass.length < 8) {
