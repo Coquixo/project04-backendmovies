@@ -2,7 +2,7 @@
 
 ## Proyecto realizado para GeeksHubs Academy, en el que se solicita realizar la API de un videoclub.
 ***
-![Portfolio Carta](img/tablas.PNG)
+<img src="./img/tablas.PNG" width="400em"/><br>
 ***
 
 ## Pre-requisitos del proyecto para hacerlo funcionar en tu equipo local:
@@ -12,7 +12,7 @@ https://nodejs.org/
 
 * Clonar el proyecto en nuestro equipo con git bash:
 ```
-$git clone 'url-del-repositorio'
+$git clone 'https://github.com/JavierMoyaSimo/project04-backendmovies.git'
 ```
 
 * Instalar todas las dependecias con el siguiente comando:
@@ -25,30 +25,17 @@ npm i
 npm run dev
 ```
 
-## Creación de la base de datos
 
-Tras modificar el archivo /config/config.json con los datos de nuestro servidor mysql (username, password, database y host), ejecutaremos los siguientes comandos:
-* **Creación de la base de datos**:
-```
-sequelize db:create
-```
-* **Creación de las tablas**:
-```
-sequelize db:migrate
-```
-* **Creación de los registros**:
-```
-sequelize db:seed:all
-```
 
 ## Uso de la API
 
-Botón para usar la colección de postman, en donde están todos los endpoints para poder manipular la base de datos:
+Botón para usar  postman,  donde están todos los endpoints para poder manipular la base de datos:
 <br>
 
  [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f?action=collection%2Ffork&collection-url=entityId%3D11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f%26entityType%3Dcollection%26workspaceId%3D8cbf41ec-fd52-44cd-82e7-1a6bcbebc7d5)
 
 ## Tecnologías utilizadas en el proyecto:
+Todo esto, se instalará cuando ejecutemos el comando npm i que hemos citado anteriormente:
 
 * **express**: Instalamos express en nuestro proyecto:
 ```
@@ -108,71 +95,53 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 * **controllers**
 
     * **authControllers.js**: En este archivo creamos las funciones de cada endpoint:
+         * **authRegisterController**: Registra un usuario.
+          * **authLoginController**: Login de un usuario
     * **moviesControllers.js**: En este archivo creamos las funciones de cada endpoint:
-        * **getAll**: Obtenemos un listado de todas las películas.
-        * **getById**: Obtenemos la película buscada por ID.
-        * **getByTitulo**: Obtenemos un listado de las películas filtrado por el titulo de la película.
-        * **getByCity**: Obtenemos un listado de las películas filtrado por la ciudad en donde se puede alquilar.
-        * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
-        * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
-        * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
-        * **create**: Creamos una nueva película con la información pasada por el body (securizado para que solo pueda acceder un administrador).
-        * **update**: Actualizamos la película con el id mandado por la url (securizado para que solo pueda acceder un administrador).
-        * **delete**: Eliminamos una película por ID (securizado para que solo pueda acceder un administrador).
-   
+        * **getMovies**: Obtenemos un listado de todas las películas.
+         * **getTopMovies**: Obtenemos un listado de las películas mejor puntuadas(rating : 5).
+        * **getMovieById**: Obtenemos la película buscada por ID.
+        * **getMovieByTitle**: Obtenemos la películas filtrada por el titulo.
+        * **getMoviesByGenre**: Obtenemos un listado de las películas filtrado por el género.   
     * **orderControllers.js**: En este archivo creamos las funciones de cada endpoint:
-        * **getAll**: Obtenemos un listado de todos los pedidos realizados (securizado para que solo pueda acceder un administrador).
-        * **create**: Creamos un pedido nuevo. Hay que indicar qué usuario hace el pedido y qué película alquila. La función comprueba si la película está en la ciudad en la que está buscando el usuario, y después comprueba si la película está alquilada o no. Si la película no está en la ciudad del usuario o ya está alquilada, no se podrá hacer el pedido. Si la película sí está en la ciudad del usuario y no está alquilada, se podrá realizar el pedido. Además, actualizada la película recién alquilada y la deja en estado alquilado, para no poder volver a ser alquilada (securizado para que solo pueda acceder un administrador o el usuario dueño del pedido).
-        * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable (securizado para que solo pueda acceder un administrador).
+        * **postNewOrderMovie**: Creamos un pedido de una película nuevo. 
+         * **postNewOrderSerie**: Creamos un pedido de una serie nuevo. 
+          * **updateOrder**: Modificamos los datos de un pedido(Modificaremos la fecha de rentig).
+        * **getOrdersByUser**: Obtenemos un listado de todos los pedidos realizados por un usuario.        
+        * **getAppOrders**: Lista de todos los pedidos realizados en la aplicación (securizado para que solo pueda acceder un administrador).
    
    * **seriesControllers.js**: En este archivo creamos las funciones de cada endpoint:
-
+         * **getSeries**: Obtenemos un listado de todas las series.
+         * **getTopSeries**: Obtenemos un listado de las series mejor puntuadas(rating : 5).
+          * **getSerieById**: Obtenemos la serie buscada por ID.
+          * **getSerieByTitle**: Obtenemos la serie filtrada por el titulo.
+          * **getSeriesByGenre**: Obtenemos un listado de las series filtrado por el género. 
+          * **getSeriesNextDays**: Obtenemos un listado de las series filtrado por si tendrán capítulo los próximos 7 días. 
+           * **getSeriesNextTheater**: Obtenemos un listado de las series filtrado por si tendrán pase en teatros.
+           * **getSeriesNextCine**: Obtenemos un listado de las series filtrado por si tendrán pase en cines.
 
    * **userControllers.js**: En este archivo creamos las funciones de cada endpoint:
-        * **signUp**: Gestionamos el registro en nuestra API. Existe un mínimo de seguridad en la contraseña creada (mínimo 8 caracteres).
-        * **signIn**: Gestionamos el login en nuestra API (securizado para que solo pueda acceder un administrador).
-        * **getAll**: Obtenemos un listado de todos los usuarios (securizado para que solo pueda acceder un administrador).
-        * **getById**: Obtenemos un usuario por ID (securizado para que solo pueda acceder un administrador o el usuario dueño del perfil).
-        * **update**: Actualizamos el usuario con el id mandado por url
-        * **delete**: Eliminamos un usuario por ID.
-        * **deleteAll**: Eliminamos todos los registros de los usuarios.
-
+        * **getUserByMail**: Obtenemos un usuario por mail.
+        * **updateUser**: Actualizamos un usuario(sólamente podrá acceder el propio usuario)
+        * **deleteUser**: Eliminamos un usuario(Opción solo para el admin)
+        
 * **migrations**
-    * **20221101173334-create-article-table.js**: Se genera este archivo al introducir el comando:
-    ```
-    sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
-    ```
-    Editamos el archivo para indicar que ningún campo pueda ser null.
-    * **02-create-usuario.js**: Se genera este archivo al introducir el comando:
-    ```
-    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
-    ```
-    Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
-    * **03-create-pedido.js**: Se genera este archivo al introducir el comando:
-    ```
-    sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date`
-    ```
-    Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro. También añadimos las Foreign Keys de las otras 2 tablas.
+    * **20221101173334-create-article-table.js**: 
+    * **20221101173433-create-movie-table.js**: 
+    * **20221101173457-create-serie-table.js**:
+    * **20221101173516-create-rol-table.js**:  
+    * **20221101173554-create-user-table.js**:
+    * **20221101173617-create-order-table.js**:  
 
 
 * **models**
+    * **article.js**: 
     * **index.js**: Gestiona la conexión con la base de datos.
-    * **pelicula.js**: Archivo creado al usar el comando:
-    ```
-    sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
-    ```
-    En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **usuario.js**: Archivo creado al usar el comando:
-    ```
-    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string,rol:string
-    ```
-    En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **pedido.js**: Archivo creado al usar el comando:
-    ```
-    sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date
-    ```
-    En este archivo está creado el esquema de datos que sigue la tabla pedidos de la base de datos. En este archivo añadimos también que ningún campo puede ser null. También indicamos que va a tener 2 Foreign Key, y agregamos los campos que van a ser Foreign Key de las otras 2 tablas.
-
+    * **movie.js**: 
+    * **order.js**: 
+    * **rol.js**: 
+    * **serie.js**: 
+    * **user.js**: 
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando:
     ```
@@ -202,25 +171,14 @@ package-lock.json
     * Ver todas las películas que tenemos en la base de datos.
     * Buscar películas por ID.
     * Buscar películas por título.
-    * Buscar películas por ciudad.
-    * Buscar películas por ciudad y si están alquiladas.
     * Buscar películas por genero.
-    * Buscar películas por actor principal.
     * Buscar películas por ID.
     * Acceder al login.
 * Los usuarios logueados con rol 'usuario', además de poder hacer todo lo anteriormente mencionado, pueden:
     * Buscar solo su usuario por ID.
     * Actualizar solo su usuario por ID.
-    * Borrar solo su usuario por ID.
     * Crear un pedido para su usuario.
 * Los usuarios logueados con administrador, además de poder hacer todo lo anteriormente mencionado, pueden:
-    * Añadir películas a la base de datos.
-    * Actualizar una película por ID.
-    * Borrar una película por ID.
-    * Registrar un usuario nuevo.
-    * Ver toda la lista de usuarios.
-    * Ver cualquier usuario por su ID.
-    * Actualizar cualquier usuario por su ID.
-    * Borrar todos los usuarios.
-    * Borrar cualquier usuario por su ID.
+    * Borrar un usuario.
+    * Listar todos los pedidos de la aplicación.
 

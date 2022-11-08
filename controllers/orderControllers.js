@@ -6,6 +6,7 @@ const {Op} = require('sequelize');
 
 
 
+
 // GENERAR NUEVO PEDIDO (PELICULA)            
 orderController.postNewOrderMovie = async (req, res) => {
     try {
@@ -123,28 +124,6 @@ orderController.getOrdersByUser = async (req, res) => {
       message: "Aquí estan tus pedidos "
     })
   }    
-// orderController.getOrdersByUser = async (req, res) => {
-//     try {
-//         // QUERY Para traerme todos los parametros en la respuesta que yo quiero:
-//         let id = req.params.id
-//         let consulta = `SELECT orders.id_user AS id_user, orders.id_order AS id_order, orders.rentingDate AS date, articleOrders.id_article AS id_article
-//     FROM orders INNER JOIN articleOrders
-//     ON orders.id_order = articleOrders.id_order WHERE orders.id_user = ${id} `
-
-//         let resultado = await models.order.sequelize.query(consulta, { type: models.order.sequelize.QueryTypes.SELECT });
-//         if (resultado) {
-//             res.send(resultado);
-//         }
-
-//     } catch (err) {
-//         res.send(err)
-//     }
-
-// }
-
-
-
-
 
 
 //LISTAR TODOS LOS PEDIDOS HECHOS EN LA APLICACION(sólo puede realizarlo el admin)
