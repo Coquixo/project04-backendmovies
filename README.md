@@ -99,7 +99,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto.
 
     * **authControllers.js**: En este archivo creamos las funciones de cada endpoint:
          * **authRegisterController**: Registra un usuario.
-          * **authLoginController**: Login de un usuario
+         * **authLoginController**: Login de un usuario
     * **moviesControllers.js**: En este archivo creamos las funciones de cada endpoint:
         * **getMovies**: Obtenemos un listado de todas las películas.
         * **getTopMovies**: Obtenemos un listado de las películas mejor puntuadas(rating : 5).
