@@ -1,6 +1,6 @@
 # Proyecto VideoClub API
 
-## Proyecto realizado para GeeksHubs Academy, en el que se solicita realizar la API de un videoclub.
+##  API de un videoclub.
 ***
 <img src="./img/tablas.PNG" width="400em"/><br>
 ***
@@ -41,7 +41,8 @@ Todo esto, se instalará cuando ejecutemos el comando npm i que hemos citado ant
 ```
 npm install express
 ```
-* **nodemon**: Instalamos nodemon en nuestro proyecto. También añadimos en nuestro **package.json** un script para poder ejecutarlo:
+* **nodemon**: Instalamos nodemon en nuestro proyecto.
+ También añadimos en nuestro **package.json** un script para poder ejecutarlo:
 ```
 npm install nodemon
 ```
@@ -68,12 +69,14 @@ npm install jsonwebtoken
 
 ## Explicación de la estructura del proyecto
 
-Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CRUD básico**. En el proyecto existirá la siguiente estructura:
+Usamos el modelo vista-controlador para estructurar el proyecto.
+ **Creamos un CRUD básico**. En el proyecto existirá la siguiente estructura:
 
-* **index.js**: Este es el archivo principal. En este archivo se llama al archivo de las rutas, se gestiona la creación de logs, se gestiona la ruta inicial (/) y se arranca el servidor.
+* **index.js**: Este es el archivo principal. En este archivo nos traemos todo lo necesario para que nuestra API funcione y se arranca el servidor.
 
 * **config**
-    * **config.json**: En este archivo se gestiona la configuración para conectar con la base de datos. Se crea de manera automática con **sequelize**.(Paralelamente, tendremos un archivo .env, el cual meteremos en el .gitignore, con lo cual no se podrá ver desde Github).
+    * **config.json**: En este archivo se gestiona la configuración para conectar con la base de datos. 
+    Se crea de manera automática con **sequelize**(paralelamente, tendremos un archivo .env, el cual meteremos en el .gitignore, con lo cual no se podrá ver desde Github).
    
 * **middlewares**
     * **authMiddleware.js**: En este archivo se gestiona el Middleware de autenticacion del token.
@@ -99,26 +102,26 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
           * **authLoginController**: Login de un usuario
     * **moviesControllers.js**: En este archivo creamos las funciones de cada endpoint:
         * **getMovies**: Obtenemos un listado de todas las películas.
-         * **getTopMovies**: Obtenemos un listado de las películas mejor puntuadas(rating : 5).
+        * **getTopMovies**: Obtenemos un listado de las películas mejor puntuadas(rating : 5).
         * **getMovieById**: Obtenemos la película buscada por ID.
         * **getMovieByTitle**: Obtenemos la películas filtrada por el titulo.
         * **getMoviesByGenre**: Obtenemos un listado de las películas filtrado por el género.   
     * **orderControllers.js**: En este archivo creamos las funciones de cada endpoint:
         * **postNewOrderMovie**: Creamos un pedido de una película nuevo. 
-         * **postNewOrderSerie**: Creamos un pedido de una serie nuevo. 
-          * **updateOrder**: Modificamos los datos de un pedido(Modificaremos la fecha de rentig).
+        * **postNewOrderSerie**: Creamos un pedido de una serie nuevo. 
+        * **updateOrder**: Modificamos los datos de un pedido(Modificaremos la fecha de rentig).
         * **getOrdersByUser**: Obtenemos un listado de todos los pedidos realizados por un usuario.        
         * **getAppOrders**: Lista de todos los pedidos realizados en la aplicación (securizado para que solo pueda acceder un administrador).
    
    * **seriesControllers.js**: En este archivo creamos las funciones de cada endpoint:
-         * **getSeries**: Obtenemos un listado de todas las series.
-         * **getTopSeries**: Obtenemos un listado de las series mejor puntuadas(rating : 5).
-          * **getSerieById**: Obtenemos la serie buscada por ID.
-          * **getSerieByTitle**: Obtenemos la serie filtrada por el titulo.
-          * **getSeriesByGenre**: Obtenemos un listado de las series filtrado por el género. 
-          * **getSeriesNextDays**: Obtenemos un listado de las series filtrado por si tendrán capítulo los próximos 7 días. 
-           * **getSeriesNextTheater**: Obtenemos un listado de las series filtrado por si tendrán pase en teatros.
-           * **getSeriesNextCine**: Obtenemos un listado de las series filtrado por si tendrán pase en cines.
+        * **getSeries**: Obtenemos un listado de todas las series.
+        * **getTopSeries**: Obtenemos un listado de las series mejor puntuadas(rating : 5).
+        * **getSerieById**: Obtenemos la serie buscada por ID.
+        * **getSerieByTitle**: Obtenemos la serie filtrada por el titulo.
+        * **getSeriesByGenre**: Obtenemos un listado de las series filtrado por el género. 
+        * **getSeriesNextDays**: Obtenemos un listado de las series filtrado por si tendrán capítulo los próximos 7 días. 
+        * **getSeriesNextTheater**: Obtenemos un listado de las series filtrado por si tendrán pase en teatros.
+        * **getSeriesNextCine**: Obtenemos un listado de las series filtrado por si tendrán pase en cines.
 
    * **userControllers.js**: En este archivo creamos las funciones de cada endpoint:
         * **getUserByMail**: Obtenemos un usuario por mail.
@@ -143,42 +146,29 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     * **serie.js**: 
     * **user.js**: 
 * **seeders**:
-    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando:
+    * **1-20221105123220-create-article.js**: Generamos 45 articulos
     ```
-    sequelize seed:generate --name demo-pelicula
     ```
-    Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (300 registros).
-    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla usuarios, tras introducir el comando:
+    * **2-20221105124921-create-rol.js**: Generamos los roles que tendrán los usuarios("user" y "rol")
     ```
-    sequelize seed:generate --name demo-usuario
     ```
-    Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (50 registros).
-    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla pedidos, tras introducir el comando:
+    * **3-20221103182355-create-movie.js**: Generamos 27 películas distintas
     ```
-    sequelize seed:generate --name demo-pedido
     ```
-    Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (3 registros).
+   * **4-20221103195105-create-serie.js**: Generamos 18 series distintas
+    ```
+    ```
 
 * **.gitignore**: Archivo en el que se indica que archivos no se subirán a nuestro repositorio. Está editado de la siguiente manera:
 ```
 /node_modules
-/logs
-package-lock.json
+.env
+/config/config.json
 ```
 
 ## Explicación de la securización de la API:
-* Los usuarios que no estén logados pueden:
-    * Ver todas las películas que tenemos en la base de datos.
-    * Buscar películas por ID.
-    * Buscar películas por título.
-    * Buscar películas por genero.
-    * Buscar películas por ID.
-    * Acceder al login.
-* Los usuarios logueados con rol 'usuario', además de poder hacer todo lo anteriormente mencionado, pueden:
-    * Buscar solo su usuario por ID.
-    * Actualizar solo su usuario por ID.
-    * Crear un pedido para su usuario.
-* Los usuarios logueados con administrador, además de poder hacer todo lo anteriormente mencionado, pueden:
-    * Borrar un usuario.
-    * Listar todos los pedidos de la aplicación.
+- En primer lugar, un usuario se registrará(entre otras cosas, con su email y password).
+- La contraseña se encriptará y se guardará en base de datos.
+- Al logearse, gestionamos la comparación entre la contraseña introducida en el login(también encriptada) y la contraseña que habíamos guardado previamente en nuestra base de datos.
+- Una vez hagamos el login, obtendremos un Token, el cual usaremos para tener acceso a los distintos endpoints privados.
 
