@@ -2,7 +2,7 @@
 
 ##  API de un videoclub.
 ***
-<img src="./img/tablas.PNG" width="400em"/><br>
+<img src="./img/tablas.PNG" width="600em"/><br>
 ***
 
 ## Pre-requisitos del proyecto para hacerlo funcionar en tu equipo local:
