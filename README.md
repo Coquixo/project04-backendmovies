@@ -26,14 +26,42 @@ npm run dev
 ```
 
 
+## Endpoints
 
-## Uso de la API
+* **Movies**
+    * **LISTADO DE TODAS LAS PELICULAS**: GET- http://localhost:3000/movies/
+    * **LISTADO DE PELICULAS TOP RATED**: GET- http://localhost:3000/movies/topMovies
+    * **PELICULA SEGUN SU ID**: GET- http://localhost:3000/movies/id/:id
+    * **PELICULA SEGUN SU TITULO**: GET- http://localhost:3000/movies/title/:title
+    * **PELICULA SEGUN SU GENERO**: GET- http://localhost:3000/movies/genre/:genre
 
-Botón para usar  postman,  donde están todos los endpoints para poder manipular la base de datos:
-<br>
+* **Series**
+    * **LISTADO DE TODAS LAS SERIES**: GET- http://localhost:3000/series/
+    * **LISTADO DE SERIES TOP RATED**: GET- http://localhost:3000/series/topSeries
+    * **SERIES SEGUN SU ID**: GET- http://localhost:3000/series/id/:id
+    * **SERIES SEGUN SU TITULO**: GET- http://localhost:3000/series/title/:title
+    * **SERIES SEGUN SU GENERO**: GET- http://localhost:3000/series/genre/:genre
+    * **LISTADO SERIES SEGUN CAPITULO PROXIMOS 7 DIAS**: GET- http://localhost:3000/series/nextsevendays
+    * **LISTADO SERIES SEGUN PASE EN TEATRO**: GET- http://localhost:3000/series/theater
+    * **LISTADO SERIES SEGUN PASE EN CINE**: GET- http://localhost:3000/series/cine
 
- [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f?action=collection%2Ffork&collection-url=entityId%3D11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f%26entityType%3Dcollection%26workspaceId%3D8cbf41ec-fd52-44cd-82e7-1a6bcbebc7d5)
+* **Orders**
+    * **GENERAR UN NUEVO PEDIDO (PELICULA)**: POST- http://localhost:3000/orders/newOrderMovie
+    * **GENERAR UN NUEVO PEDIDO (SERIE)**: POST- http://localhost:3000/orders/newOrderSerie
+    * **MODIFICAR DATOS DE UN PEDIDO**: PATCH- http://localhost:3000/orders/updateOrder
+    * **LISTAR TODOS LOS PEDIDOS DE UN USUARIO**: GET- http://localhost:3000/orders/orders/:id
+    * **LISTAR TODOS LOS PEDIDOS HECHOS EN LA APLICACION(sólo puede realizarlo el admin)**: GET- http://localhost:3000/orders/appOrders
 
+* **Users**
+    * **MOSTRAR DATOS DE USUARIO SEGUN MAIL**: GET- http://localhost:3000/users/user/:mail
+    * **MODIFICAR DATOS DE USUARIO**: PATCH- http://localhost:3000/users/updateUser/:mail
+    * **BORRAR UN USUARIO(solo puede hacerlo el admin)**: DELETE- http://localhost:3000/users/deleteUser/:mail
+
+* **Auth**
+    * **REGISTER**: POST- http://localhost:3000/auth/register
+    * **LOGIN**: POST- http://localhost:3000/auth/login
+
+    
 ## Tecnologías utilizadas en el proyecto:
 Todo esto, se instalará cuando ejecutemos el comando npm i que hemos citado anteriormente:
 

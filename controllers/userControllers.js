@@ -3,9 +3,7 @@ const models = require('../models/index')
 const userController = {}
 
 
-const {
-    encryptPassword
-} = require('../services/auth.service');
+const { encryptPassword } = require('../services/auth.service');
 require('dotenv').config();
 
 
@@ -78,7 +76,7 @@ userController.deleteUser = async (req, res) => {
             where: { mail: mail }
         })
         res.json({ resp, message: "Se ha elminado el usuario correctamente" })
-        
+
 
     } catch (err) {
 
