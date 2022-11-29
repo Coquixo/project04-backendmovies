@@ -59,7 +59,7 @@ const createUser = async (userBody) => {
     address: userBody.address,
     mail: userBody.mail,
     password: userBody.password,
-    RolIdRol: userBody.RolIdRol
+    rolIdRol: userBody.rolIdRol
     
   });
   return user;
