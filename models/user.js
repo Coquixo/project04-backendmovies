@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class users extends Model {
     /**
@@ -13,37 +11,39 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       // users.belongsTo(models.rols)
       //Relacion entre user-order
-      users.belongsTo(models.rols)
-      users.hasMany(models.orders)
-
+      users.belongsTo(models.rols);
+      users.hasMany(models.orders);
     }
   }
-  users.init({
-    id_user: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true
+  users.init(
+    {
+      id_user: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      name: DataTypes.STRING,
+      surname: DataTypes.STRING,
+      age: DataTypes.INTEGER,
+      phone: DataTypes.STRING,
+      address: DataTypes.STRING,
+      mail: DataTypes.STRING,
+      password: DataTypes.STRING,
+      rolIdRol: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        references: {
+          model: "rols",
+          key: "id_rol",
+        },
+      },
     },
-    name: DataTypes.STRING,
-    surname: DataTypes.STRING,
-    age: DataTypes.INTEGER,
-    phone: DataTypes.STRING,
-    address: DataTypes.STRING,
-    mail: DataTypes.STRING,
-    password: DataTypes.STRING,
-    RolIdRol: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      references: {
-        model: 'rols',
-        key: 'id_rol'
-      }
+    {
+      sequelize,
+      modelName: "users",
+      timestamps: false,
     }
-  }, {
-    sequelize,
-    modelName: 'users',
-    timestamps: false
-  });
+  );
   return users;
 };
