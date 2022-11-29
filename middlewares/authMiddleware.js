@@ -29,11 +29,11 @@ const isValidRole = (rol) => (req, res, next) => {
   }
 }
 
-const isValidUser = (mail) => async (req, res, next) => {
-  mail = req.params.mail || req.body.mail
-  console.log(mail)
-  console.log(req.auth.mail)
-  if (req.auth?.mail === mail) {
+const isValidUser = (email) => async (req, res, next) => {
+  email = req.params.email || req.body.email
+  console.log(email)
+  console.log(req.auth.email)
+  if (req.auth?.email === email) {
     next()
   } else {
     res.status(403).json({ message: "You are not authorized" })

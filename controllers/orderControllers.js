@@ -13,7 +13,7 @@ orderController.postNewOrderMovie = async (req, res) => {
         let body = req.body;
         delete body.rentingDate
 
-        if (body.mail === req.auth?.mail) {
+        if (body.email === req.auth?.email) {
             let movie = await models.movies.findOne({
                 where: { title: body.title }
             })
@@ -31,7 +31,7 @@ orderController.postNewOrderMovie = async (req, res) => {
                 })
                 res.status(200).json({
                     resp,
-                    mail: req.auth?.mail,
+                    email: req.auth?.email,
                     message: "Tu pedido de peliculas se ha realizado correctamente"
                 })
             } else {
@@ -51,7 +51,7 @@ orderController.postNewOrderSerie = async (req, res) => {
         let body = req.body;
         delete body.rentingDate
 
-        if (body.mail === req.auth?.mail) {
+        if (body.email === req.auth?.email) {
             let serie = await models.series.findOne({
                 where: { title: body.title }
             })
@@ -69,7 +69,7 @@ orderController.postNewOrderSerie = async (req, res) => {
                 })
                 res.status(200).json({
                     resp,
-                    mail: req.auth?.mail,
+                    email: req.auth?.email,
                     message: "Tu pedido de series se ha realizado correctamente"
                 })
             } else {
@@ -94,7 +94,7 @@ orderController.updateOrder = async (req, res) => {
                 articleIdArticle: movie.articleIdArticle,
             }
         })
-        if (body.mail === req.auth?.mail && movie.articleIdArticle === orderedMovie.articleIdArticle) {
+        if (body.email === req.auth?.email && movie.articleIdArticle === orderedMovie.articleIdArticle) {
             let resp = await models.orders.update({
                 rentingDate: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`
             },

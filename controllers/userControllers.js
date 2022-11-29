@@ -8,9 +8,9 @@ require("dotenv").config();
 //USUARIO SEGUN SU EMAIL
 userController.getUserByMail = async (req, res) => {
   try {
-    let { mail } = req.params;
+    let { email } = req.params;
     let resp = await models.users.findAll({
-      where: { mail: mail },
+      where: { email: email },
     });
     res.send(resp);
   } catch (err) {
@@ -20,10 +20,10 @@ userController.getUserByMail = async (req, res) => {
 
 // MODIFICAR DATOS DE USUARIO
 userController.updateUser = async (req, res) => {
-  let { mail } = req.params;
+  let { email } = req.params;
   let user = req.body;
   let searchUser = await models.users.findOne({
-    where: { mail: req.auth.mail },
+    where: { email: req.auth.email },
   });
   let newPassword = searchUser.password;
   if (user.password) {
@@ -37,11 +37,11 @@ userController.updateUser = async (req, res) => {
       age: user.age,
       phone: user.phone,
       address: user.address,
-      mail: user.mail,
+      email: user.email,
       password: newPassword,
     },
     {
-      where: { mail: mail },
+      where: { email: email },
     }
   );
   res.json({
@@ -54,9 +54,9 @@ userController.updateUser = async (req, res) => {
 
 userController.deleteUser = async (req, res) => {
   try {
-    let { mail } = req.params;
+    let { email } = req.params;
     let resp = await models.users.destroy({
-      where: { mail: mail },
+      where: { email: email },
     });
     res.json({ resp, message: "Se ha elminado el usuario correctamente" });
   } catch (err) {}

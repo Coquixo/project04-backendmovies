@@ -19,21 +19,21 @@ const assertValidPassword = (pass) => {
   }
 }
 
-const assertEmailIsValid = (mail) => {
+const assertEmailIsValid = (email) => {
     // must validate a valid email
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     // return emailRegex.test(email);
-  const isValid = mail.match(emailRegex);
+  const isValid = email.match(emailRegex);
   if (!isValid) {
     throw new Error("Email is invalid")
   }
 };
 
-const assertEmailIsUnique = async (mail) => {
+const assertEmailIsUnique = async (email) => {
     // validate email is unique
   const user = await models.users.findOne({
-    where: {mail:mail}
+    where: {email:email}
   });
   if (user) {
     throw new Error("Email is already registered")
@@ -57,7 +57,7 @@ const createUser = async (userBody) => {
     age:userBody.age,
     phone:userBody.phone,
     address: userBody.address,
-    mail: userBody.mail,
+    email: userBody.email,
     password: userBody.password,
     rolIdRol: userBody.rolIdRol
     

@@ -12,14 +12,14 @@ const models = require("../models/index");
 const db = require("../db/db");
 
 // MOSTRAR DATOS DE USUARIO SEGUN MAIL
-router.get("/user/:mail", isValidUser(), userController.getUserByMail);
+router.get("/user/:email", isValidUser(), userController.getUserByMail);
 
 // MODIFICAR DATOS DE USUARIO
-router.patch("/updateUser/:mail", isValidUser(), userController.updateUser);
+router.patch("/updateUser/:email", isValidUser(), userController.updateUser);
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
 router.delete(
-  "/deleteUser/:mail",
+  "/deleteUser/:email",
   isValidRole("admin"),
   userController.deleteUser
 );

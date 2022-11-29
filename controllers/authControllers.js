@@ -22,7 +22,7 @@ const authRegisterController = async (req, res) => {
   }
   // validate email is valid
   try {
-    assertEmailIsValid(body.mail);
+    assertEmailIsValid(body.email);
   } catch (error) {
     console.error(error);
     res.status(400).json({ message: "Email is invalid: " + error.message });
@@ -30,7 +30,7 @@ const authRegisterController = async (req, res) => {
   }
   // validate email is unique
   try {
-    assertEmailIsUnique(body.mail);
+    assertEmailIsUnique(body.email);
   } catch (error) {
     console.error(error);
     res.status(400).json({
@@ -49,10 +49,10 @@ const authRegisterController = async (req, res) => {
 };
 
 const authLoginController = async (req, res) => {
-  const { mail, password } = req.body;
+  const { email, password } = req.body;
   try {
     const userFound = await models.users.findOne({
-      where: { mail: mail },
+      where: { email: email },
     });
     if (!userFound) {
       res.status(401).json({ message: "Password or email is incorrect" });
@@ -73,19 +73,21 @@ const authLoginController = async (req, res) => {
 
     const jwt = jsonwebtoken.sign(
       {
-        mail: userFound.mail,
+        name:userFound.name,
+        email: userFound.email,
         id: userFound.id_user,
-        rol: userFound.RolIdRol.toLowerCase(),
+        rol: userFound.rolIdRol.toLowerCase(),
       },
       secret
     );
     res.status(200).json({
       message: "Login successful",
       jwt: jwt,
+     
     });
   } catch (error) {
     res.send(error.message);
-    console.log("kajsdlk");
+    ;
   }
 };
 
