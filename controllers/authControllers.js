@@ -92,7 +92,6 @@ const authLoginController = async (req, res) => {
     res.status(200).json({
       message: "Login successful",
       jwt: jwt,
-      name: userFound.name,
     });
   } catch (error) {
     res.send(error.message);
