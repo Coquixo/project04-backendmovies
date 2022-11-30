@@ -5,6 +5,18 @@ const userController = {};
 const { encryptPassword } = require("../services/auth.service");
 require("dotenv").config();
 
+//Get All Users
+
+userController.getUsers = async (req, res) => {
+  try {
+    models.users.findAll().then((resp) => {
+      res.send(resp);
+    });
+  } catch (error) {
+    res.send(error);
+  }
+};
+
 //USUARIO SEGUN SU EMAIL
 userController.getUserByMail = async (req, res) => {
   try {

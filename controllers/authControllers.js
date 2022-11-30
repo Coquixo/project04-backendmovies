@@ -40,7 +40,16 @@ const authRegisterController = async (req, res) => {
   }
   // save user
   try {
-    const UserCreated = await createUser(body);
+    const UserCreated = await createUser({
+      name: body.name,
+      surname: body.surname,
+      age: body.age,
+      phone: body.phone,
+      address: body.address,
+      email: body.email,
+      password: body.password,
+      rolIdRol: body.rolIdRol || "user",
+    });
     res.status(201).json(UserCreated);
   } catch (error) {
     console.error(error);
@@ -73,7 +82,7 @@ const authLoginController = async (req, res) => {
 
     const jwt = jsonwebtoken.sign(
       {
-        name:userFound.name,
+        name: userFound.name,
         email: userFound.email,
         id: userFound.id_user,
         rol: userFound.rolIdRol.toLowerCase(),
@@ -83,11 +92,10 @@ const authLoginController = async (req, res) => {
     res.status(200).json({
       message: "Login successful",
       jwt: jwt,
-     
+      name: userFound.name,
     });
   } catch (error) {
     res.send(error.message);
-    ;
   }
 };
 

@@ -11,6 +11,10 @@ const userController = require("../controllers/userControllers");
 const models = require("../models/index");
 const db = require("../db/db");
 
+//Traer todos los users
+
+router.get("/", isValidRole("admin"), userController.getUsers);
+
 // MOSTRAR DATOS DE USUARIO SEGUN MAIL
 router.get("/user/:email", isValidUser(), userController.getUserByMail);
 
