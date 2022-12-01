@@ -93,6 +93,10 @@ const authLoginController = async (req, res) => {
       message: "Login successful",
       jwt: jwt,
       name: userFound.name,
+      surname: userFound.surname,
+      email: userFound.email,
+      phone: userFound.phone,
+      address: userFound.address,
     });
   } catch (error) {
     res.send(error.message);
