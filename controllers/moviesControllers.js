@@ -40,7 +40,9 @@ movieController.getMovieByTitle = async (req, res) => {
     try {
         let title = req.params.title
         let resp = await models.movies.findAll({
-            where: { title: title }
+            where: { 
+                title: {[Op.like]:"%"+title+"%"} 
+            }
         })
         res.send(resp)
     } catch (err) {
@@ -55,7 +57,7 @@ movieController.getMoviesByGenre = async (req, res) => {
         let resp = await models.movies.findAll({
             attributes: ['title', 'genre'],
             where: {
-                genre: genre
+                genre: {[Op.like]:"%"+genre+"%"}
             }
         })
         res.send(resp)
