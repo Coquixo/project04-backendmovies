@@ -92,6 +92,7 @@ const authLoginController = async (req, res) => {
     res.status(200).json({
       message: "Login successful",
       jwt: jwt,
+      id_user: userFound.id_user,
       name: userFound.name,
       surname: userFound.surname,
       email: userFound.email,
