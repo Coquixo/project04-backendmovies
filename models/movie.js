@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       synopsis: DataTypes.STRING,
       rating: DataTypes.STRING,
       year: DataTypes.STRING,
-      ArticleIdArticle: {
+      articleIdArticle: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

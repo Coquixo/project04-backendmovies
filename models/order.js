@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       rentingDate: DataTypes.DATEONLY,
-      UserIdUser: {
+      userIdUser: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
 
-      ArticleIdArticle: {
+      articleIdArticle: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

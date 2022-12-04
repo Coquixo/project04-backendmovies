@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
 
-      ArticleIdArticle: {
+      articleIdArticle: {
         type: Sequelize.INTEGER,
         references: {
           model: "articles",

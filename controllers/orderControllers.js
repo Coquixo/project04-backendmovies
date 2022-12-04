@@ -16,7 +16,7 @@ orderController.postNewOrderMovie = async (req, res) => {
       });
       let repeated = await models.orders.findOne({
         where: {
-          UserIdUser: req.auth.id,
+          userIdUser: req.auth.id,
           articleIdArticle: movie.articleIdArticle,
         },
       });
@@ -25,7 +25,7 @@ orderController.postNewOrderMovie = async (req, res) => {
           rentingDate: `${new Date().getFullYear()}-${
             new Date().getMonth() + 1
           }-${new Date().getDate()}`,
-          UserIdUser: req.auth.id,
+          userIdUser: req.auth.id,
           articleIdArticle: movie.articleIdArticle,
         });
         res.status(200).json({
@@ -56,7 +56,7 @@ orderController.postNewOrderSerie = async (req, res) => {
       });
       let repeated = await models.orders.findOne({
         where: {
-          UserIdUser: req.auth.id,
+          userIdUser: req.auth.id,
           articleIdArticle: serie.articleIdArticle,
         },
       });
@@ -65,7 +65,7 @@ orderController.postNewOrderSerie = async (req, res) => {
           rentingDate: `${new Date().getFullYear()}-${
             new Date().getMonth() + 1
           }-${new Date().getDate()}`,
-          UserIdUser: req.auth.id,
+          userIdUser: req.auth.id,
           articleIdArticle: serie.articleIdArticle,
         });
         res.status(200).json({
@@ -125,7 +125,7 @@ orderController.updateOrder = async (req, res) => {
 orderController.getOrdersByUser = async (req, res) => {
   let resp = await models.orders.findAll({
     where: {
-      UserIdUser: req.auth.id,
+      userIdUser: req.auth.id,
     },
   });
   res.status(200).json({

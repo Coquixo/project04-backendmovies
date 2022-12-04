@@ -13,7 +13,7 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        ArticleIdArticle: 28,
+        articleIdArticle: 28,
 
 
       }, {
@@ -25,7 +25,7 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        ArticleIdArticle: 29,
+        articleIdArticle: 29,
 
 
       }, {
@@ -37,7 +37,7 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        ArticleIdArticle: 30,
+        articleIdArticle: 30,
 
 
       }, {
@@ -49,7 +49,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 31,
+        articleIdArticle: 31,
 
 
       }, {
@@ -61,7 +61,7 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        ArticleIdArticle: 32,
+        articleIdArticle: 32,
 
 
       }, {
@@ -73,7 +73,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 33,
+        articleIdArticle: 33,
 
 
       }, {
@@ -85,7 +85,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 34,
+        articleIdArticle: 34,
 
 
       }, {
@@ -97,7 +97,7 @@ module.exports = {
         nextsevendays: true,
         theater: false,
         cine: false,
-        ArticleIdArticle: 35,
+        articleIdArticle: 35,
 
 
       }, {
@@ -109,7 +109,7 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        ArticleIdArticle: 36,
+        articleIdArticle: 36,
 
 
       }, {
@@ -121,7 +121,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: false,
-        ArticleIdArticle: 37,
+        articleIdArticle: 37,
 
 
       }, {
@@ -133,7 +133,7 @@ module.exports = {
         nextsevendays: true,
         theater: true,
         cine: true,
-        ArticleIdArticle: 38,
+        articleIdArticle: 38,
 
 
       }, {
@@ -145,7 +145,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 39,
+        articleIdArticle: 39,
 
 
       }, {
@@ -157,7 +157,7 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: false,
-        ArticleIdArticle: 40,
+        articleIdArticle: 40,
 
 
       }, {
@@ -169,7 +169,7 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: false,
-        ArticleIdArticle: 41,
+        articleIdArticle: 41,
 
 
       }, {
@@ -181,7 +181,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 42,
+        articleIdArticle: 42,
 
 
       }, {
@@ -193,7 +193,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: false,
-        ArticleIdArticle: 43,
+        articleIdArticle: 43,
 
 
       }, {
@@ -205,7 +205,7 @@ module.exports = {
         nextsevendays: false,
         theater: false,
         cine: true,
-        ArticleIdArticle: 44,
+        articleIdArticle: 44,
 
 
       }, {
@@ -217,7 +217,7 @@ module.exports = {
         nextsevendays: false,
         theater: true,
         cine: true,
-        ArticleIdArticle: 45,
+        articleIdArticle: 45,
 
 
       }

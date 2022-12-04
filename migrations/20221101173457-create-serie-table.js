@@ -33,7 +33,7 @@ module.exports = {
       cine: {
         type: Sequelize.BOOLEAN
       },
-      ArticleIdArticle: {
+      articleIdArticle: {
         type: Sequelize.INTEGER,
         references: {
           model: 'articles',

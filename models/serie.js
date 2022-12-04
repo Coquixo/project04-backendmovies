@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     nextsevendays: DataTypes.BOOLEAN,
     theater: DataTypes.BOOLEAN,
     cine: DataTypes.BOOLEAN,
-    ArticleIdArticle: {
+    articleIdArticle: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

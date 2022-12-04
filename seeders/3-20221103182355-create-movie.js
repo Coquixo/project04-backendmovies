@@ -12,7 +12,7 @@ module.exports = {
         synopsis: "Batman Returns. With the help of Lieutenant Jim Gordon  Batman sets out to destroy organized crime in Gotham City.",
         rating: "4",
         year: "2008",
-        ArticleIdArticle: 1,
+        articleIdArticle: 1,
         
       }, {
         title: "The Godfather",
@@ -21,7 +21,7 @@ module.exports = {
         synopsis: "'The Godfather' is the patriarch of one of the ruling families in New York in the 1940s. A fight of violent episodes will begin...",
         rating: "5",
         year: "1972",
-        ArticleIdArticle: 2,
+        articleIdArticle: 2,
         
       }, {
         title: "The green Mile",
@@ -30,7 +30,7 @@ module.exports = {
         synopsis: "In the southern United States, Paul Edgecomb is a prison guard in charge of the Green Mile, a corridor that separates the cells condemned to the electric chair",
         rating: "5",
         year: "1999",
-        ArticleIdArticle: 3,
+        articleIdArticle: 3,
         
       }, {
         title: "The Lord of the Rings: The Return of the King",
@@ -39,7 +39,7 @@ module.exports = {
         synopsis: "Saruman's forces have been destroyed. For the first time in a long time, there seems to be a little hope...",
         rating: "4",
         year: "2003",
-        ArticleIdArticle: 4,
+        articleIdArticle: 4,
         
       }, {
         title: "Interstellar",
@@ -48,7 +48,7 @@ module.exports = {
         synopsis: "A group of explorers making use of a recently discovered wormhole to overcome the limitations of manned space travel.",
         rating: "3",
         year: "2010",
-        ArticleIdArticle: 5,
+        articleIdArticle: 5,
         
       }, {
         title: "Inception",
@@ -57,7 +57,7 @@ module.exports = {
         synopsis: "Dom Cobb is a skilled thief of valuable secrets from the depths of the subconscious during the dream state when the mind is most vulnerable...",
         rating: "3",
         year: "1999",
-        ArticleIdArticle: 6,
+        articleIdArticle: 6,
         
       }, {
         title: "Matrix",
@@ -66,7 +66,7 @@ module.exports = {
         synopsis: "Thomas Anderson leads a double life: by day he's a programmer at a major software company, and by night a computer hacker named Neo.",
         rating: "5",
         year: "1994",
-        ArticleIdArticle: 7,
+        articleIdArticle: 7,
         
       }, {
         title: "Schindler's List",
@@ -75,7 +75,7 @@ module.exports = {
         synopsis: "Oskar Schindler organizes an ambitious plan to win the sympathy of the Nazis. After the invasion of Poland...",
         rating: "5",
         year: "1973",
-        ArticleIdArticle: 8,
+        articleIdArticle: 8,
         
       }, {
         title: "Spider-Man: A new universe",
@@ -84,7 +84,7 @@ module.exports = {
         synopsis: "In a parallel universe where Peter Parker has died, a high school boy named Miles Morales is the new Spider-Man.",
         rating: "2",
         year: "2003",
-        ArticleIdArticle: 9,
+        articleIdArticle: 9,
         
       }, {
         title: "The lion king",
@@ -93,7 +93,7 @@ module.exports = {
         synopsis: "The African savannah is the setting for the adventures of Simba, a little lion who is the heir to the throne.",
         rating: "4",
         year: "1994",
-        ArticleIdArticle: 10,
+        articleIdArticle: 10,
         
       }, {
         title: "The infinite purge",
@@ -102,7 +102,7 @@ module.exports = {
         synopsis: "For the members of an underground movement, an annual night of anarchy and murder is no longer enough, so they decide to return America to endless chaos and carnage...",
         rating: "1",
         year: "2010",
-        ArticleIdArticle: 11,
+        articleIdArticle: 11,
         
       }, {
         title: "The exorcist",
@@ -111,7 +111,7 @@ module.exports = {
         synopsis: "Regan is a twelve-year-old girl who is the victim of paranormal phenomena such as levitation or the manifestation of superhuman strength.",
         rating: "5",
         year: "1997",
-        ArticleIdArticle: 12,
+        articleIdArticle: 12,
         
       }, {
         title: "The Avengers: Endgame",
@@ -120,7 +120,7 @@ module.exports = {
         synopsis: "After the devastating events of 'Avengers: Infinity War', the universe is in ruins due to the actions of Thanos...",
         rating: "4",
         year: "2020",
-        ArticleIdArticle: 13,
+        articleIdArticle: 13,
         
       }, {
         title: "Untouchable",
@@ -129,7 +129,7 @@ module.exports = {
         synopsis: "Philippe, an aristocrat who has become quadriplegic, hires Driss, an immigrant from a slum recently released from prison, as a home carer",
         rating: "5",
         year: "2003",
-        ArticleIdArticle: 14,
+        articleIdArticle: 14,
         
       }, {
         title: "The truman show",
@@ -138,7 +138,7 @@ module.exports = {
         synopsis: "Truman Burbank is an ordinary man who has lived his entire life in one of those towns where nothing ever happens. However, suddenly...",
         rating: "3",
         year: "1998",
-        ArticleIdArticle: 15,
+        articleIdArticle: 15,
         
       }, {
         title: "Forrest gump",
@@ -147,7 +147,7 @@ module.exports = {
         synopsis: "Forrest Gump is a boy with shallow mental deficiencies who, despite everything, will become a hero during the Vietnam War.",
         rating: "5",
         year: "1994",
-        ArticleIdArticle: 16,
+        articleIdArticle: 16,
         
       }, {
         title: "Three men and one leg",
@@ -156,7 +156,7 @@ module.exports = {
         synopsis: "Aldo, Giovanni and Giacomo go to the wedding of the latter whose fiancée is the sister of the two wives of the former...",
         rating: "1",
         year: "1997",
-        ArticleIdArticle: 17,
+        articleIdArticle: 17,
         
       }, {
         title: "The unforeseen of love",
@@ -165,7 +165,7 @@ module.exports = {
         synopsis: "Rosie and Alex are the best friends in the world and they live in Dublin. A story of laughter and love will arise between them...",
         rating: "1",
         year: "2010",
-        ArticleIdArticle: 18,
+        articleIdArticle: 18,
         
       }, {
         title: "Alien, the eighth passenger",
@@ -174,7 +174,7 @@ module.exports = {
         synopsis: "Back on Earth, the cargo ship Nostromo cuts its journey short and awakens its seven crew members...",
         rating: "4",
         year: "1979",
-        ArticleIdArticle: 19,
+        articleIdArticle: 19,
         
       }, {
         title: "Night and fog",
@@ -183,7 +183,7 @@ module.exports = {
         synopsis: "A walk through the Nazi concentration camps of Nuremberg...",
         rating: "3",
         year: "2011",
-        ArticleIdArticle: 20,
+        articleIdArticle: 20,
         
       }, {
         title: "Avicii: True Stories ",
@@ -192,7 +192,7 @@ module.exports = {
         synopsis: "Documentary that follows in the footsteps of the famous DJ from his beginnings to his worldwide successes, and his subsequent fight against the disease.",
         rating: "5",
         year: "2020",
-        ArticleIdArticle: 21,
+        articleIdArticle: 21,
         
       }, {
         title: "Free alone",
@@ -201,7 +201,7 @@ module.exports = {
         synopsis: "Documentary that narrates the feat of Alex Honnold when climbing without any help the vertical rock formation located within the Yosemite.",
         rating: "1",
         year: "2018",
-        ArticleIdArticle: 22,
+        articleIdArticle: 22,
         
       }, {
         title: "Soul",
@@ -210,7 +210,7 @@ module.exports = {
         synopsis: "Have you ever wondered where your passion, dreams, and interests come from? What is it that makes you... you?",
         rating: "3",
         year: "2019",
-        ArticleIdArticle: 23,
+        articleIdArticle: 23,
         
       }, {
         title: "The glow",
@@ -219,7 +219,7 @@ module.exports = {
         synopsis: "Jack Torrance moves with his wife and son to the impressive Overlook hotel in Colorado to take care of its maintenance during the winter season.",
         rating: "4",
         year: "1980",
-        ArticleIdArticle: 24,
+        articleIdArticle: 24,
         
       }, {
         title: "Life imprisonment",
@@ -228,7 +228,7 @@ module.exports = {
         synopsis: "Accused of the murder of his wife, Andrew Dufresne, after being sentenced to life in prison, is sent to Shawshank prison...",
         rating: "2",
         year: "2015",
-        ArticleIdArticle: 25,
+        articleIdArticle: 25,
         
       }, {
         title: "Klaus",
@@ -237,7 +237,7 @@ module.exports = {
         synopsis: "Santa Klaus has arrived for Christmas!",
         rating: "1",
         year: "2020",
-        ArticleIdArticle: 26,
+        articleIdArticle: 26,
         
       }, {
         title: "Tomorrow's war",
@@ -246,7 +246,7 @@ module.exports = {
         synopsis: "One day the world comes to a standstill when a group of time travelers is transported from the year 2051 to deliver an urgent message: Humanity is losing the global war against a deadly alien species.",
         rating: "1",
         year: "2021",
-        ArticleIdArticle: 27,
+        articleIdArticle: 27,
         
       }
     ], {});

@@ -12,14 +12,14 @@ module.exports = {
       rentingDate: {
         type: Sequelize.DATE
       },
-      UserIdUser: {
+      userIdUser: {
         type: Sequelize.INTEGER,
         references: {
           model: 'users',
           key: 'id_user'
         }
       },
-      ArticleIdArticle: {
+      articleIdArticle: {
         type: Sequelize.INTEGER,
         references: {
           model: 'articles',
