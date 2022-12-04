@@ -2,7 +2,6 @@ const jsonwebtoken = require("jsonwebtoken");
 
 // MIDDLEWARE AUTENTICACION DE TOKEN
 const authBearerMiddleware = async (req, res, next) => {
-  console.log(req.headers);
   const { authorization } = req.headers;
 
   const [type, jwt] = authorization.split(" ");
@@ -31,8 +30,6 @@ const isValidRole = (rol) => (req, res, next) => {
 
 const isValidUser = (email) => async (req, res, next) => {
   email = req.params.email || req.body.email;
-  console.log(email);
-  console.log(req.auth.email);
   if (req.auth?.email === email) {
     next();
   } else {

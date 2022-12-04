@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class orders extends Model {
     /**
@@ -11,40 +9,44 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      orders.belongsTo(models.users)
+      orders.belongsTo(models.users);
       //Relacion entre order y article
-      orders.belongsTo(models.articles)
+      orders.belongsTo(models.articles);
     }
   }
-  orders.init({
-    id_order: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true
-    },
-    rentingDate: DataTypes.DATEONLY,
-    UserIdUser: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'users',
-        key: 'id_user'
+  orders.init(
+    {
+      id_order: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
       },
-    
-    ArticleIdArticle: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'articles',
-        key: "id_article"
-      }
-    }
+      rentingDate: DataTypes.DATEONLY,
+      UserIdUser: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: "users",
+          key: "id_user",
+        },
+      },
 
-  }}, {
-    sequelize,
-    modelName: 'orders',
-    timestamps: false
-  });
+      ArticleIdArticle: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: "articles",
+          key: "id_article",
+        },
+      },
+    },
+
+    {
+      sequelize,
+      modelName: "orders",
+      timestamps: false,
+    }
+  );
   return orders;
 };
