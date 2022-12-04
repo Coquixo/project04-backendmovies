@@ -19,7 +19,7 @@ router.get("/", isValidRole("admin"), userController.getUsers);
 router.get("/user/:email", isValidUser(), userController.getUserByMail);
 
 // MODIFICAR DATOS DE USUARIO
-router.patch("/updateUser/:email", isValidUser(), userController.updateUser);
+router.put("/updateUser/:email", isValidUser(), userController.updateUser);
 
 //BORRAR UN USUARIO(solo puede hacerlo el admin)
 router.delete(
