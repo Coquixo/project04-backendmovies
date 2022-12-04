@@ -98,6 +98,7 @@ const authLoginController = async (req, res) => {
       email: userFound.email,
       phone: userFound.phone,
       address: userFound.address,
+      rolIdRol: userFound.rolIdRol,
     });
   } catch (error) {
     res.send(error.message);
